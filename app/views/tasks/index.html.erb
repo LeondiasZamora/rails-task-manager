@@ -1,8 +1,18 @@
+<div class="container d-flex justify-content-center">
+<div>
+<h1>My Tasks</h1>
+
 <% @tasks.each do |task|%>
-  <li>
+  <p>
+    <input class="form-check-input me-3" type="checkbox" value="" id="flexCheckDefault">
+
      <%= link_to task.title, task_path(task) %>
      <%= link_to "Delete",
         task_path(task),
         data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-  </li>
+
+  </p>
 <%end%>
+</div>
+
+</div>
